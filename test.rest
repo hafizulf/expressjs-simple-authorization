@@ -1,4 +1,4 @@
-GET http://localhost:3009/todos
+GET http://localhost:3009/todos/2
 Content-Type: application/json
 
 {

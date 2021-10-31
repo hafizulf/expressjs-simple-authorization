@@ -5,4 +5,20 @@ const permissionScope = (user) => {
   return todos.filter(todo => todo.userId === user.id)
 }
 
-module.exports = { permissionScope }
+const viewTodo = (req, res, next) => {
+  const user = req.user
+  const todo = req.todo
+
+  const hasAccess = (
+    user.role === ROLE.ADMIN ||
+    todo.id === user.id
+  )
+
+  if (!hasAccess) {
+    return res.status(401).send('Not Allowed')
+  }
+
+  next()
+}
+
+module.exports = { permissionScope, viewTodo }
