@@ -1,6 +1,6 @@
-GET http://localhost:3009/todos/2
+DELETE  http://localhost:3009/todos/2
 Content-Type: application/json
 
 {
-  "userId": 1
+  "userId": 2
 }

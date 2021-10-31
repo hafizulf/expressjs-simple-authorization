@@ -21,4 +21,12 @@ const viewTodo = (req, res, next) => {
   next()
 }
 
-module.exports = { permissionScope, viewTodo }
+const deleteTodo = (req, res, next) => {
+  if (req.todo.id !== req.user.id) {
+    return res.status(401).send('Not Allowed')
+  }
+
+  next()
+}
+
+module.exports = { permissionScope, viewTodo, deleteTodo }
