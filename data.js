@@ -9,10 +9,10 @@ const users = [
   { id: 3, name: 'furqan', role:ROLE.BASIC }
 ]
 
-const projects = [
+const todos = [
   { id: 1, name: 'Skuy project', userId: 1 },
   { id: 2, name: 'Hafizul project', userId: 2 },
   { id: 3, name: 'Furqan project', userId: 3 }
 ]
 
-module.exports = { ROLE, users, projects }
+module.exports = { ROLE, users, todos }

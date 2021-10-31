@@ -1,4 +1,15 @@
+# USER LANDING PAGE
 GET
   /           --> Guest
   /dashboard  --> Authenticated Users Only
   /admin      --> Authenticated && ROLE.ADMIN Only
+
+# TODO
+GET
+  /todos/     --> Admin can view all
+              --> Authenticated Users can view their todos
+  /todos/:id  --> Admin can all (spesific)
+              --> Authenticated Users can view their todo (spesific)
+
+DELETE
+  /todos/:id  --> Each Authenticated Users can delete their todo (Only)
