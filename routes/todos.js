@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-const { setTodo, permissionScope } = require('../helper/Todos')
+const { setTodo } = require('../helper/SetTodo')
 const { authUser } = require('../middleware/UserAuth')
+const { permissionScope } = require('../middleware/TodoAuth')
 
 router.get('/', authUser, (req, res) => {
   res.json(permissionScope(req.user))

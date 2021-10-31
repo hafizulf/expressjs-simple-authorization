@@ -1,9 +1,4 @@
-const { ROLE, todos } = require('../data')
-
-const permissionScope = (user) => {
-  if (user.role === ROLE.ADMIN) return todos
-  return todos.filter(todo => todo.userId === user.id)
-}
+const { todos } = require('../data')
 
 const setTodo = (req, res, next) => {
   const todoId = parseInt(req.params.id)
@@ -17,4 +12,4 @@ const setTodo = (req, res, next) => {
   next()
 }
 
-module.exports = { setTodo, permissionScope }
+module.exports = { setTodo }
