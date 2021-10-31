@@ -1,6 +1,6 @@
-GET http://localhost:3009/admin
+GET http://localhost:3009/todos
 Content-Type: application/json
 
 {
-  "userId": 2
+  "userId": 1
 }

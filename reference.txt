@@ -7,9 +7,9 @@ GET
 # TODO
 GET
   /todos/     --> Admin can view all
-              --> Authenticated Users can view their todos
-  /todos/:id  --> Admin can all (spesific)
-              --> Authenticated Users can view their todo (spesific)
+              --> Authenticated Users can view only their todos
+  /todos/:id  --> Admin can view all (spesific)
+              --> Authenticated Users can view only their todo (spesific)
 
 DELETE
   /todos/:id  --> Each Authenticated Users can delete their todo (Only)
