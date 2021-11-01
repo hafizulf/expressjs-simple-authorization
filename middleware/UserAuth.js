@@ -8,7 +8,6 @@ const authUser = (req, res, next) => {
 
 const authRole = (role) => {
   return(req, res, next) => {
-    console.log(req.user)
     if (req.user.role !== role) {
       return res.status(401).send('Not allowed')
     }
