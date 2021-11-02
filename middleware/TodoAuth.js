@@ -6,12 +6,9 @@ const permissionScope = (user) => {
 }
 
 const viewTodo = (req, res, next) => {
-  const user = req.user
-  const todo = req.todo
-
   const hasAccess = (
-    user.role === ROLE.ADMIN ||
-    todo.id === user.id
+    req.user.role === ROLE.ADMIN ||
+    req.todo.id === req.user.id
   )
 
   if (!hasAccess) {
